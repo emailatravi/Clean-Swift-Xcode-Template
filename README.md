@@ -9,5 +9,3 @@ How to use:
 To install `make install`
 
 To Uninstall `make uninstall`
-
-Help taken from [link](https://github.com/arimunandar/Clean-Architecture-VIP-Xcode-Template)
