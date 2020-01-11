@@ -109,20 +109,7 @@ extension UIViewController {
 
 extension UIViewController {
     private struct UniqueIdProperies {
-        static var pickerDelegate: IDataPickerDelegate?
         static var previousViewController: UIViewController?
-    }
-    
-    // MARK: - Picker Delegate Properties
-    
-    weak var dataPickerDelegate: IDataPickerDelegate? {
-        get {
-            return objc_getAssociatedObject(self, &UniqueIdProperies.pickerDelegate) as? IDataPickerDelegate
-        } set {
-            if let unwrappedValue = newValue {
-                objc_setAssociatedObject(self, &UniqueIdProperies.pickerDelegate, unwrappedValue as IDataPickerDelegate?, .OBJC_ASSOCIATION_ASSIGN)
-            }
-        }
     }
     
     var previousViewController: UIViewController? {
@@ -305,12 +292,4 @@ public extension UIWindow {
             }
         }
     }
-}
-
-//================================================================================================
-// Common Protocol Delegate
-//================================================================================================
-
-protocol IDataPickerDelegate: class {
-    func didDataPicker<T>(_ data: T?)
 }

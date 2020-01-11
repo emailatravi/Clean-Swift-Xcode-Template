@@ -25,11 +25,3 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewControllerProtocol {
 	// do someting...
 }
-
-extension ___VARIABLE_productName:identifier___ViewController {
-	// do someting...
-}
-
-extension ___VARIABLE_productName:identifier___ViewController {
-	// do someting...
-}
