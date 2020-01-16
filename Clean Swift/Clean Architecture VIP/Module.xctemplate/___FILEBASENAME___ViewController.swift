@@ -10,6 +10,8 @@ import UIKit
 
 protocol ___VARIABLE_productName:identifier___ViewControllerProtocol: class {
 	var router: ___VARIABLE_productName:identifier___RouterProtocol? { get set }
+
+	func displaySomething(viewModel: ___VARIABLE_productName:identifier___Model.ViewModel)
 }
 
 class ___VARIABLE_productName:identifier___ViewController: UIViewController {
@@ -20,8 +22,16 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController {
         super.viewDidLoad()
 		// do someting...
     }
+
+    func doSomeThing() {
+    	let requestModel = ___VARIABLE_productName:identifier___Model.RequestModel()
+    	interactor?.doSomething(requestModel: requestModel)
+    }
 }
 
 extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewControllerProtocol {
-	// do someting...
+	
+	func displaySomething(viewModel: ___VARIABLE_productName:identifier___Model.ViewModel) {
+		// do someting...
+	}
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ___VARIABLE_productName:identifier___PresenterProtocol: class {
-	// do someting...
+	func presentSomething(responseModel: ___VARIABLE_productName:identifier___Model.ResponseModel)
 }
 
 class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol {	
@@ -17,5 +17,10 @@ class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:id
 	
 	init(view: ___VARIABLE_productName:identifier___ViewControllerProtocol?) {
 		self.view = view
+	}
+
+	func presentSomething(responseModel: ___VARIABLE_productName:identifier___Model.ResponseModel) {
+		let viewModel = ___VARIABLE_productName:identifier___Model.ViewModel()
+		view?.displaySomething(viewModel: viewModel)
 	}
 }

@@ -10,6 +10,8 @@ import UIKit
 
 protocol ___VARIABLE_productName:identifier___InteractorProtocol: class {
 	var parameters: [String: Any]? { get set }
+
+	func doSomething(requestModel: ___VARIABLE_productName:identifier___Model.RequestModel)
 }
 
 class ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___InteractorProtocol {
@@ -18,5 +20,11 @@ class ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:i
 
     init(presenter: ___VARIABLE_productName:identifier___PresenterProtocol) {
     	self.presenter = presenter
+    }
+
+    func doSomething(requestModel: ___VARIABLE_productName:identifier___Model.RequestModel) {
+    	// do something...
+    	let responseModel = ___VARIABLE_productName:identifier___Model.ResponseModel()
+    	presenter?.presentSomething(responseModel: responseModel)
     }
 }
