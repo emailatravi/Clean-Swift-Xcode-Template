@@ -12,13 +12,15 @@ protocol ___VARIABLE_productName:identifier___PresenterProtocol: class {
 	func presentSomething(responseModel: ___VARIABLE_productName:identifier___Model.ResponseModel)
 }
 
-class ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol {	
+class ___VARIABLE_productName:identifier___Presenter {	
 	weak var view: ___VARIABLE_productName:identifier___ViewControllerProtocol?
 	
 	init(view: ___VARIABLE_productName:identifier___ViewControllerProtocol?) {
 		self.view = view
 	}
+}
 
+extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___PresenterProtocol {	
 	func presentSomething(responseModel: ___VARIABLE_productName:identifier___Model.ResponseModel) {
 		let viewModel = ___VARIABLE_productName:identifier___Model.ViewModel()
 		view?.displaySomething(viewModel: viewModel)

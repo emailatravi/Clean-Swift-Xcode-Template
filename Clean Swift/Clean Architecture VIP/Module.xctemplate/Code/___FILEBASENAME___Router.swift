@@ -12,10 +12,14 @@ protocol ___VARIABLE_productName:identifier___RouterProtocol: class {
 	// do someting...
 }
 
-class ___VARIABLE_productName:identifier___Router: ___VARIABLE_productName:identifier___RouterProtocol {	
+class ___VARIABLE_productName:identifier___Router {	
 	weak var view: ___VARIABLE_productName:identifier___ViewController?
 	
 	init(view: ___VARIABLE_productName:identifier___ViewController?) {
 		self.view = view
 	}
+}
+
+extension ___VARIABLE_productName:identifier___Router: ___VARIABLE_productName:identifier___RouterProtocol {	
+
 }
